@@ -30,11 +30,27 @@ class MyHomePage extends StatelessWidget {
         // the App.build method, and use it to set our appbar title.
         title: Text(title),
       ),
-      body: Center(
+      body: Container(
+        width: 200,
+        height: 250,
+        padding: EdgeInsets.all(16),
+        margin: EdgeInsets.all(30),
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: Colors.amber,
+          border: Border.all(),
+        ),
         child: Text(
-          'New text for tatata',
+          'New text dddd dddsa ddd',
+          style: TextStyle(fontSize: 30),
         ),
       ),
+      /*Center(
+        child: Text(
+          'New text for tatata',
+          style: TextStyle(fontSize: 30),
+        ),
+      ),*/
       /*Align(
         alignment: Alignment.center,
         child: Text(
