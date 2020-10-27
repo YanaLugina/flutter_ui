@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -30,19 +31,53 @@ class MyHomePage extends StatelessWidget {
         // the App.build method, and use it to set our appbar title.
         title: Text(title),
       ),
-      body: Container(
-        width: 200,
-        height: 250,
-        padding: EdgeInsets.all(16),
-        margin: EdgeInsets.all(30),
-        alignment: Alignment.center,
-        decoration: BoxDecoration(
-          color: Colors.amber,
-          border: Border.all(),
-        ),
-        child: Text(
-          'New text dddd dddsa ddd',
-          style: TextStyle(fontSize: 30),
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(20.0, 35.0, 20.0, 20.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: <Widget> [
+            Container(
+              width: 230,
+              height: 300,
+              alignment: Alignment.topLeft,
+              decoration: BoxDecoration(
+                  color: Colors.amber,
+                  border: null,
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(5.0),
+                      topRight: Radius.circular(5.0),
+                      bottomRight: Radius.circular(3.0),
+                      bottomLeft: Radius.circular(5.0),
+                  )
+              ),
+              child: Padding(
+                padding: EdgeInsets.all(20.0),
+                child: Text(
+                  'Первое сообщение, которое не влезло на экран в одну фразу',
+                  style: TextStyle(fontSize: 30),
+                ),
+              ),
+            ),
+            Container(
+              width: 10,
+              height: 10,
+              margin: EdgeInsets.fromLTRB(1, 0, 0, 1),
+              decoration: BoxDecoration(
+                color: Colors.amber,
+                borderRadius: BorderRadius.circular(50)
+              ),
+            ),
+            Container(
+              width: 5,
+              height: 5,
+              margin: EdgeInsets.fromLTRB(1, 0, 0, 5),
+              decoration: BoxDecoration(
+                  color: Colors.amber,
+                  borderRadius: BorderRadius.circular(50)
+              ),
+            ),
+          ],
         ),
       ),
       /*Center(
