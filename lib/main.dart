@@ -53,10 +53,40 @@ class MyHomePage extends StatelessWidget {
               ),
               child: Padding(
                 padding: EdgeInsets.all(20.0),
-                child: Text(
-                  'Первое сообщение, которое не влезло на экран в одну фразу',
-                  style: TextStyle(fontSize: 30),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text(
+                      'Первое сообщение, которое не влезло на экран в одну фразу',
+                      style: TextStyle(fontSize: 30),
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      crossAxisAlignment: CrossAxisAlignment.end,
+                      children: <Widget>[
+                        Icon(
+                          Icons.adjust,
+                          color: Colors.red,
+                        ),
+                        Icon(
+                          Icons.adjust,
+                          size: 10,
+                          color: Colors.green,
+                        ),
+                        Icon(
+                          Icons.adjust,
+                          color: Colors.blue,
+                        ),
+                        Icon(
+                          Icons.adjust,
+                          size: 40,
+                          color: Colors.red,
+                        ),
+                      ],
+                    ),
+                  ],
                 ),
+
               ),
             ),
             Container(
@@ -68,15 +98,19 @@ class MyHomePage extends StatelessWidget {
                 borderRadius: BorderRadius.circular(50)
               ),
             ),
-            Container(
-              width: 5,
-              height: 5,
-              margin: EdgeInsets.fromLTRB(1, 0, 0, 5),
-              decoration: BoxDecoration(
-                  color: Colors.amber,
-                  borderRadius: BorderRadius.circular(50)
+            Align(
+              alignment: Alignment(1, 1),
+              child: Container(
+                width: 5,
+                height: 5,
+                margin: EdgeInsets.fromLTRB(1, 0, 0, 5),
+                decoration: BoxDecoration(
+                    color: Colors.red,
+                    borderRadius: BorderRadius.circular(50)
+                ),
               ),
             ),
+
           ],
         ),
       ),
