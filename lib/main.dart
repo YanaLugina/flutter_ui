@@ -56,31 +56,48 @@ class MyHomePage extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text(
-                      'Первое сообщение, которое не влезло на экран в одну фразу',
-                      style: TextStyle(fontSize: 30),
+                    Expanded(
+                      child: Text(
+                        'Первое сообщение, которое не влезло на экран в одну фразу',
+                        style: TextStyle(fontSize: 30),
+                      ),
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      crossAxisAlignment: CrossAxisAlignment.end,
                       children: <Widget>[
-                        Icon(
-                          Icons.adjust,
-                          color: Colors.red,
+                        Expanded(
+                          flex: 1,
+                          child: Container(
+                            child: Icon(
+                              Icons.adjust,
+                              color: Colors.red,
+                            ),
+                            color: Colors.grey,
+                          ),
                         ),
-                        Icon(
-                          Icons.adjust,
-                          size: 10,
-                          color: Colors.green,
+                        Expanded(
+                          child: Container(
+                            child:Icon(
+                              Icons.adjust,
+                              size: 10,
+                              color: Colors.green,
+                            ),
+                            color: Colors.red,
+                          ),
                         ),
-                        Icon(
-                          Icons.adjust,
-                          color: Colors.blue,
+                        Expanded(
+                          child: Container(
+                            child: Icon(
+                              Icons.adjust,
+                              color: Colors.blue,
+                            ),
+                            color: Colors.red,
+                          ),
                         ),
-                        Icon(
-                          Icons.adjust,
-                          size: 40,
-                          color: Colors.red,
+                        Expanded(
+                          child: Container(
+                            child: Image.network('https://avatars1.githubusercontent.com/u/37318317?s=88&u=a9ccaeb50bbb3b82aad1161418f5a4602dd50ef9&v=4'),
+                            color: Colors.white,
+                          ),
                         ),
                       ],
                     ),
