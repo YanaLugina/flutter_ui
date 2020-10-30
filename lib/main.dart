@@ -33,10 +33,24 @@ class MyHomePage extends StatelessWidget {
       ),
       body: Padding(
         padding: EdgeInsets.fromLTRB(20.0, 35.0, 20.0, 20.0),
-        child: Row(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget> [
+            Stack(
+              alignment: Alignment.center,
+              children: <Widget> [
+                Icon(Icons.airplay, color: Colors.red, size: 200),
+                Positioned(
+                  top: 50,
+                  left: 45,
+                  child: Text(
+                      'TV TuT',
+                      style: TextStyle(fontSize: 30)
+                  ),
+                ),
+              ],
+            ),
             Container(
               width: 230,
               height: 300,
@@ -56,6 +70,7 @@ class MyHomePage extends StatelessWidget {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
+
                     Expanded(
                       child: Text(
                         'Первое сообщение, которое не влезло на экран в одну фразу',
