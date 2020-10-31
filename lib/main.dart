@@ -41,14 +41,18 @@ class MyHomePage extends StatelessWidget {
               alignment: Alignment.center,
               children: <Widget> [
                 Icon(Icons.airplay, color: Colors.red, size: 200),
-                Positioned(
-                  top: 50,
-                  left: 45,
-                  child: Text(
-                      'TV TuT',
-                      style: TextStyle(fontSize: 30)
+                Positioned.directional(
+                  textDirection: TextDirection.rtl,
+                  child: Container(
+                      color: Colors.white,
+                      child: Stack (
+                        children: <Widget>[
+                          Image.network('https://avatars1.githubusercontent.com/u/37318317?s=88&u=a9ccaeb50bbb3b82aad1161418f5a4602dd50ef9&v=4'),
+                          Text('Tsts', style: TextStyle(backgroundColor: Colors.yellow)),
+                        ],
+                      ),
+                    ),
                   ),
-                ),
               ],
             ),
             Container(
