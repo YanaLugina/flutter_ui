@@ -38,17 +38,21 @@ class MyHomePage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget> [
             Stack(
-              alignment: Alignment.center,
+              alignment: Alignment.topLeft,
               children: <Widget> [
-                Icon(Icons.airplay, color: Colors.red, size: 200),
+                Icon(Icons.airplay, color: Colors.red, size: 150),
                 Positioned.directional(
                   textDirection: TextDirection.rtl,
                   child: Container(
-                      color: Colors.white,
+                      color: Colors.lightGreen,
+                      width: 250,
                       child: Stack (
                         children: <Widget>[
-                          Image.network('https://avatars1.githubusercontent.com/u/37318317?s=88&u=a9ccaeb50bbb3b82aad1161418f5a4602dd50ef9&v=4'),
-                          Text('Tsts', style: TextStyle(backgroundColor: Colors.yellow)),
+                          Image.network('https://avatars1.githubusercontent.com/u/37318317?s=88&u=a9ccaeb50bbb3b82aad1161418f5a4602dd50ef9&v=4', width: 500, height: 100,),
+                          Text('Tst jdfkdfjd'
+                              'dfdfdiodfdf'
+                              'dfdffdffdf fdfdfrfreferfferfe ferfe '
+                              'erfe erferfe erfer erferf s', style: TextStyle(backgroundColor: Colors.blue)),
                         ],
                       ),
                     ),
