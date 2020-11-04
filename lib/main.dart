@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 void main() {
   runApp(MyApp());
@@ -40,19 +41,25 @@ class MyHomePage extends StatelessWidget {
             Stack(
               alignment: Alignment.topLeft,
               children: <Widget> [
-                Icon(Icons.airplay, color: Colors.red, size: 150),
+                Icon(Icons.airplay, color: Colors.red, size: 150.0),
                 Positioned.directional(
                   textDirection: TextDirection.rtl,
                   child: Container(
                       color: Colors.lightGreen,
-                      width: 250,
+                      width: 300,
                       child: Stack (
+                        clipBehavior: Clip.hardEdge,
                         children: <Widget>[
-                          Image.network('https://avatars1.githubusercontent.com/u/37318317?s=88&u=a9ccaeb50bbb3b82aad1161418f5a4602dd50ef9&v=4', width: 500, height: 100,),
-                          Text('Tst jdfkdfjd'
-                              'dfdfdiodfdf'
-                              'dfdffdffdf fdfdfrfreferfferfe ferfe '
-                              'erfe erferfe erfer erferf s', style: TextStyle(backgroundColor: Colors.blue)),
+                          Image.network('https://avatars1.githubusercontent.com/u/37318317?s=88&u=a9ccaeb50bbb3b82aad1161418f5a4602dd50ef9&v=4', width: 200, height: 100,),
+                          Text(
+                              'Здась полно всякого текста который можно'
+                              'обрезать и перевести на'
+                              'другую строку, но не тут то было'
+                              'что-то пошло не так',
+                              style: TextStyle(
+                                backgroundColor: Colors.blue,
+                              )
+                          ),
                         ],
                       ),
                     ),
